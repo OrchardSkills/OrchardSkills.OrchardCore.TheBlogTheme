@@ -5,11 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-rc1-11492" />
+    <PackageReference Include="OrchardCore.Application.Cms.Targets" Version="1.0.0-rc1-11850" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\OrchardSkills.OrchardCore.TheBlogTheme\OrchardSkills.OrchardCore.TheBlogTheme.csproj" />
+    <ProjectReference Include="..\OrchardSkills.OrchardCore.TheBlogTheme\TheBlogTheme.csproj" />
   </ItemGroup>
   
 </Project>

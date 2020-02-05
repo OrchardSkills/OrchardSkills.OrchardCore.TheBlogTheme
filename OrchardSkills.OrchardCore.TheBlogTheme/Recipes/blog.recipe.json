@@ -90,63 +90,6 @@
       "name": "ContentDefinition",
       "ContentTypes": [
         {
-          "Name": "Article",
-          "DisplayName": "Article",
-          "Hidden": false,
-          "Settings": {
-            "ContentTypeSettings": {
-              "Creatable": true,
-              "Draftable": true,
-              "Versionable": true,
-              "Listable": true
-            }
-          },
-          "ContentTypePartDefinitionRecords": [
-            {
-              "PartName": "Article",
-              "Name": "Article",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "2"
-                }
-              }
-            },
-            {
-              "PartName": "AutoroutePart",
-              "Name": "AutoroutePart",
-              "Settings": {
-                "AutoroutePartSettings": {
-                  "AllowCustomPath": true,
-                  "Pattern": "{{ Model.ContentItem | display_text | slugify }}",
-                  "ShowHomepageOption": true
-                },
-                "ContentTypePartSettings": {
-                  "Position": "1"
-                }
-              }
-            },
-            {
-              "PartName": "HtmlBodyPart",
-              "Name": "HtmlBodyPart",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Editor": "Wysiwyg",
-                  "Position": "3"
-                }
-              }
-            },
-            {
-              "PartName": "TitlePart",
-              "Name": "TitlePart",
-              "Settings": {
-                "ContentTypePartSettings": {
-                  "Position": "0"
-                }
-              }
-            }
-          ]
-        },
-        {
           "Name": "LiquidPage",
           "DisplayName": "Liquid Page",
           "Hidden": false,
@@ -683,7 +626,6 @@
       ]
     },
     {
-      // Create the indices before the content items so they are indexed automatically.
       "name": "lucene-index",
       "Indices": [
         {
@@ -794,30 +736,6 @@
           "BlogPost": {
             "Subtitle": {
               "Text": "Problems look mighty small from 150 miles up"
-            }
-          }
-        },
-        {
-          "ContentItemId": "[js: uuid()]",
-          "ContentType": "Article",
-          "DisplayText": "About",
-          "Latest": true,
-          "Published": true,
-          "Owner": "[js: parameters('AdminUsername')]",
-          "Author": "[js: parameters('AdminUsername')]",
-          "AutoroutePart": {
-            "Path": "about",
-            "SetHomepage": false
-          },
-          "HtmlBodyPart": {
-            "Html": "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe nostrum ullam eveniet pariatur voluptates odit, fuga atque ea nobis sit soluta odio, adipisci quas excepturi maxime quae totam ducimus consectetur?</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius praesentium recusandae illo eaque architecto error, repellendus iusto reprehenderit, doloribus, minus sunt. Numquam at quae voluptatum in officia voluptas voluptatibus, minus!</p><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum molestiae debitis nobis, quod sapiente qui voluptatum, placeat magni repudiandae accusantium fugit quas labore non rerum possimus, corrupti enim modi! Et.</p>"
-          },
-          "TitlePart": {
-            "Title": "About"
-          },
-          "Article": {
-            "Subtitle": {
-              "Text": "This is what I do."
             }
           }
         },
